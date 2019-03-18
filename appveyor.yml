@@ -14,10 +14,10 @@ environment:
 
 init:
   - "ECHO %PYTHON%"
-  - "git submodule init"
-  - "git submodule update --recursive"
 
 install:
+  - "git submodule init"
+  - "git submodule update --recursive"
   - "%PYTHON%\\python.exe -m pip install --upgrade setuptools"
   - "%PYTHON%\\python.exe -m pip install wheel"
   - "%PYTHON%\\python.exe -m pip install numpy"
